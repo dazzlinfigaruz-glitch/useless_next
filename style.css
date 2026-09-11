@@ -1,0 +1,431 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(circle at 10% 15%, #c8f7ff 0%, transparent 22%),
+        radial-gradient(circle at 90% 20%, #ffd6f5 0%, transparent 25%),
+        radial-gradient(circle at 80% 90%, #e2ff9f 0%, transparent 22%),
+        #f5f1e8;
+
+    color: #111;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+/* RANDOM INTERNET DECORATIONS */
+
+body::before {
+    content: "★";
+    position: fixed;
+    top: 30px;
+    left: 40px;
+
+    font-size: 70px;
+    color: #6c4cff;
+
+    transform: rotate(-15deg);
+}
+
+body::after {
+    content: "WHY?";
+    position: fixed;
+    right: 40px;
+    bottom: 35px;
+
+    font-size: 28px;
+    font-weight: 900;
+
+    color: #ff4fa3;
+
+    transform: rotate(8deg);
+}
+
+/* MAIN WEBSITE */
+
+.container {
+    position: relative;
+
+    width: 90%;
+    max-width: 700px;
+
+    padding: 55px 50px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border: 2px solid #111;
+
+    border-radius: 30px;
+
+    box-shadow:
+        12px 12px 0 #111,
+        0 0 0 8px rgba(255,255,255,0.4);
+
+    text-align: center;
+}
+
+/* LITTLE LABEL */
+
+.container::before {
+    content: "⚠️ VERY IMPORTANT NUMBER TECHNOLOGY ⚠️";
+
+    position: absolute;
+
+    top: -18px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-2deg);
+
+    background: #d8ff3e;
+
+    border: 2px solid #111;
+
+    padding: 7px 15px;
+
+    font-size: 12px;
+    font-weight: 900;
+
+    white-space: nowrap;
+
+    box-shadow: 4px 4px 0 #111;
+}
+
+/* TITLE */
+
+h1 {
+    margin: 10px 0;
+
+    font-size: 70px;
+
+    font-weight: 1000;
+
+    letter-spacing: -5px;
+
+    line-height: 0.9;
+
+    color: #111;
+
+    text-transform: uppercase;
+}
+
+/* COLORFUL WORD EFFECT */
+
+h1::first-letter {
+    color: #7047ff;
+}
+
+.subtitle {
+    font-size: 17px;
+
+    color: #555;
+
+    max-width: 500px;
+
+    margin: 20px auto 35px;
+
+    line-height: 1.5;
+}
+
+/* INPUT */
+
+input {
+    width: 100%;
+
+    padding: 20px;
+
+    background: #f7f4ff;
+
+    border: 3px solid #111;
+
+    border-radius: 16px;
+
+    font-size: 22px;
+
+    text-align: center;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+input:focus {
+    background: #e9ddff;
+
+    transform: rotate(-1deg);
+
+    box-shadow: 7px 7px 0 #7047ff;
+}
+
+/* BUTTON AREA */
+
+button {
+    border: 3px solid #111;
+
+    border-radius: 15px;
+
+    padding: 15px 25px;
+
+    margin: 8px;
+
+    font-size: 16px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    color: #111;
+
+    transition: 0.15s;
+
+    box-shadow: 5px 5px 0 #111;
+}
+
+button:hover {
+    transform: translate(3px, 3px);
+
+    box-shadow: 2px 2px 0 #111;
+}
+
+button:active {
+    transform: translate(5px, 5px);
+
+    box-shadow: none;
+}
+
+/* NORMAL */
+
+#normalBtn {
+    background: #8c7aff;
+}
+
+/* USELESS */
+
+#uselessBtn {
+    background: #ff71b7;
+}
+
+/* RESULT */
+
+#result {
+    margin-top: 40px;
+
+    min-height: 110px;
+
+    padding: 30px;
+
+    background: #eeeaff;
+
+    border: 3px dashed #111;
+
+    border-radius: 20px;
+
+    position: relative;
+}
+
+/* RANDOM RESULT LABEL */
+
+#result::before {
+    content: "RESULT ZONE";
+
+    position: absolute;
+
+    top: -14px;
+    left: 20px;
+
+    background: #ffdd45;
+
+    border: 2px solid #111;
+
+    padding: 4px 10px;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    transform: rotate(-3deg);
+}
+
+#result h2 {
+    font-size: 25px;
+
+    margin: 10px 0 20px;
+}
+
+#result h1 {
+    font-size: 85px;
+
+    color: #7047ff;
+
+    margin: 10px;
+}
+
+/* RANDOM MOBILE FIX */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 45px 20px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .container::before {
+        font-size: 9px;
+    }
+
+    body::before {
+        font-size: 40px;
+    }
+
+    body::after {
+        font-size: 20px;
+    }
+
+    button {
+        width: 90%;
+    }
+}
+/* CURRENT NUMBER */
+
+.number-input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-label {
+    position: absolute;
+    left: 20px;
+    top: -13px;
+
+    background: #d8ff3e;
+
+    border: 2px solid #111;
+
+    padding: 5px 10px;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    transform: rotate(-2deg);
+
+    z-index: 2;
+
+    box-shadow: 3px 3px 0 #111;
+}
+
+.number-input-wrapper input {
+    margin: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0ebff,
+            #fff
+        );
+
+    font-size: 28px;
+    font-weight: 900;
+
+    height: 75px;
+
+    padding-left: 30px;
+    padding-right: 50px;
+
+    box-shadow: 7px 7px 0 #111;
+
+    transition: 0.2s;
+}
+
+.number-input-wrapper input:hover {
+    transform: rotate(-0.5deg);
+}
+
+.number-input-wrapper input:focus {
+    background: #eee7ff;
+
+    transform: translate(-2px, -2px);
+
+    box-shadow: 9px 9px 0 #7047ff;
+}
+
+.input-decoration {
+    position: absolute;
+
+    right: 22px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 28px;
+
+    color: #7047ff;
+
+    pointer-events: none;
+}
+#result {
+    user-select: none;
+    caret-color: transparent;
+}
+
+#result * {
+    caret-color: transparent;
+}
+#result button {
+    user-select: none;
+}
+/* NORMAL MODE RESULT */
+
+.result-message {
+    margin: 5px 0 10px;
+    font-size: 18px;
+    font-weight: 800;
+    color: #333;
+}
+
+.number-result {
+    display: inline-block;
+
+    font-size: 80px;
+    font-weight: 1000;
+    line-height: 1;
+
+    color: #7047ff;
+
+    padding: 10px 30px;
+
+    background: #d8ff3e;
+
+    border: 3px solid #111;
+    border-radius: 18px;
+
+    box-shadow: 7px 7px 0 #111;
+
+    transform: rotate(-2deg);
+
+    margin: 10px 0 20px;
+}
+
+.result-note {
+    margin: 5px 0;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #777;
+}

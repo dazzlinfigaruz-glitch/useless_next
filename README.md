@@ -2,60 +2,64 @@
 
 
 
-# [Project Name] 🎯
+# Next Number 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: Tally
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Helna Sajal C  - AISAT
+- Member 2: Dazzlin Figaruz - AISAT
+
 
 ### Project Description
-[2-3 lines about what your project does]
+**Next Number** is a fun, intentionally useless website that gives you the next number you enter.
+It has a **Normal Mode** for a quick answer and a **Useless Mode** that adds unnecessary questions and dramatic interactions.
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+It solves the extremely serious problem of not knowing what number comes next — and makes the solution unnecessarily complicated.
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+By adding 1 to the number—because apparently that wasn't unnecessarily complicated enough. In Useless Mode, we make you prepare emotionally, answer pointless questions, and wait dramatically just to reveal the next number. 😭
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- HTML,CSS,JavaScript
+- None,built using vanilla web technologies 
+- None
+- VS Code,Git,GitHub,Web browser,HTML5 Audio API for sound effect
 
 For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- Laptop, speakers
+- SPECIFICATIONS : Any modern commputer capable of running a web browser and code editor , internet connection for devolopment/GitHub
+- TOOLS REQUIRED : VS Code, web browser, Git and GitHub
 
 ### Implementation
 For Software:
 # Installation
-[commands]
+Since Next Number is built with plain HTML, CSS, and JavaScript, there are no external frameworks or libraries to install
 
 # Run
-[commands]
+This is a static website, there is no build command or backend server required.
 
 ### Project Documentation
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot1](screenshot1.png)
+*The main interface where the user enters a number and chooses between Normal mode and Useless mode.*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot2](screenshot2.png)
+*Useless mode showing the unnecessary questions and dramatic interactions.*
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Screenshot3](screenshot3.png)
+*The final result showing the next number after the unnecessary journey.*
+
+![Screenshot4](screenshot4.png)
+*Final result when chosen in normal mode.*
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)
@@ -82,8 +86,8 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+[Watch our project demo](demo.mp4)
+*This video demonstrate the complete Next Number experience.*
 
 # Additional Demos
 [Add any extra demo materials/links]
