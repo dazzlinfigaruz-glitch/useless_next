@@ -9,8 +9,6 @@
 
 <body>
 
-    <body>
-
     <div class="container">
 
         <h1>Next<br>Number</h1>
@@ -20,16 +18,17 @@
         </p>
 
         <div class="number-input-wrapper">
-    <span class="input-label">CURRENT NUMBER</span>
+            <span class="input-label">CURRENT NUMBER</span>
 
-    <input 
-        type="number" 
-        id="numberInput" 
-        placeholder="Enter a number"
-    >
+            <input
+                type="number"
+                id="numberInput"
+                placeholder="Enter a number"
+            >
 
-    <span class="input-decoration">✦</span>
-</div>
+            <span class="input-decoration">✦</span>
+        </div>
+
         <br>
 
         <button id="normalBtn">Normal Mode</button>
@@ -39,205 +38,239 @@
 
     </div>
 
-    <script>const input = document.getElementById("numberInput");
-const result = document.getElementById("result");
+
+    <script>
+
+        const input = document.getElementById("numberInput");
+        const result = document.getElementById("result");
 
 
-// ================================
-// NORMAL MODE
-// ================================
+        // ================================
+        // NORMAL MODE
+        // ================================
 
-document.getElementById("normalBtn").onclick = function () {
-    const number = Number(input.value);
+        document.getElementById("normalBtn").onclick = function () {
 
-    if (input.value === "") {
-        result.innerText = "Please enter a number.";
-        return;
-    }
+            const number = Number(input.value);
 
-    result.innerHTML = `
-        <p class="result-message">Your next number is...</p>
-        <div class="number-result">${number + 1}</div>
-        <p class="result-note">That was surprisingly easy.</p>
-    `;
-};
-
-
-// ================================
-// USELESS MODE
-// ================================
-
-document.getElementById("uselessBtn").onclick = function () {
-    const number = Number(input.value);
-
-    if (input.value === "") {
-        result.innerText = "Please enter a number.";
-        return;
-    }
-
-    result.innerHTML = `
-        <h2>Are you ready?</h2>
-
-        <button onclick="question2(${number})">
-            YES, I AM READY
-        </button>
-
-        <button onclick="notReady(${number})">
-            NO, I'M NOT READY
-        </button>
-    `;
-};
-
-
-// ================================
-// NOT READY
-// ================================
-
-function notReady(number) {
-    result.innerHTML = `
-        <h2>That's okay.</h2>
-
-        <p>
-            Take your time. We aren't going anywhere.
-        </p>
-
-        <button onclick="playFahh(${number})">
-            I'M READY NOW
-        </button>
-    `;
-}
-
-
-// ================================
-// FAAAHH SOUND
-// ================================
-
-function playFahh(number) {
-    const sound = new Audio("Fahh Sound Effect.mp3");
-
-    sound.play();
-
-    notReadyAgain(number);
-}
-function notReadyAgain(number) {
-    result.innerHTML = `
-        <h2>Wait.</h2>
-
-        <p>
-            You said you weren't ready 2 seconds ago.
-            We need to discuss this.
-        </p>
-
-        <button onclick="question2(${number})">
-            FINE, LET'S CONTINUE
-        </button>
-    `;
-}
-
-
-// ================================
-// QUESTION 2
-// ================================
-
-function question2(number) {
-    result.innerHTML = `
-        <h2>Have you mentally prepared yourself?</h2>
-
-        <button onclick="question6(${number})">
-            YES
-        </button>
-    `;
-}
-
-
-// ================================
-// FINAL QUESTION
-// ================================
-
-function question6(number) {
-    result.innerHTML = `
-        <h2>Last question.</h2>
-
-        <p>
-            Why do you want to know the next number?
-        </p>
-
-        <button onclick="finalQuestion(${number})">
-            BECAUSE I NEED TO KNOW
-        </button>
-
-        <button onclick="finalQuestion(${number})">
-            I'M JUST CURIOUS
-        </button>
-
-        <button onclick="finalQuestion(${number})">
-            I HAVE MY REASONS
-        </button>
-    `;
-}
-
-
-// ================================
-// FINAL RESPONSE
-// ================================
-
-function finalQuestion(number) {
-    result.innerHTML = `
-        <h2>Hmm.</h2>
-
-        <p>Interesting choice.</p>
-
-        <button onclick="showAnswer(${number})">
-            PLEASE GIVE ME THE NUMBER
-        </button>
-    `;
-}
-
-
-// ================================
-// COUNTDOWN + ANSWER
-// ================================
-
-function showAnswer(number) {
-
-    let count = 3;
-
-    result.innerHTML = `
-        <h2>Preparing your answer...</h2>
-        <h1 id="countdown">3</h1>
-    `;
-
-    const countdown = setInterval(() => {
-
-        count--;
-
-        if (count > 0) {
-
-            document.getElementById("countdown").innerText = count;
-
-        } else {
-
-            clearInterval(countdown);
+            if (input.value === "") {
+                result.innerText = "Please enter a number.";
+                return;
+            }
 
             result.innerHTML = `
-                <h2>THE NEXT NUMBER IS...</h2>
+                <p class="result-message">Your next number is...</p>
+
+                <div class="number-result">
+                    ${number + 1}
+                </div>
+
+                <p class="result-note">
+                    That was surprisingly easy.
+                </p>
+            `;
+        };
+
+
+        // ================================
+        // USELESS MODE
+        // ================================
+
+        document.getElementById("uselessBtn").onclick = function () {
+
+            const number = Number(input.value);
+
+            if (input.value === "") {
+                result.innerText = "Please enter a number.";
+                return;
+            }
+
+            result.innerHTML = `
+                <h2>Are you ready?</h2>
+
+                <button onclick="question2(${number})">
+                    YES, I'M READY
+                </button>
+
+                <button onclick="notReady(${number})">
+                    NO, I'M NOT READY
+                </button>
+            `;
+        };
+
+
+        // ================================
+        // NOT READY
+        // ================================
+
+        function notReady(number) {
+
+            result.innerHTML = `
+                <h2>That's okay.</h2>
+
+                <p>
+                    Take your time. We aren't going anywhere.
+                </p>
+
+                <button onclick="playFahh(${number})">
+                    I'M READY NOW
+                </button>
+            `;
+        }
+
+
+        // ================================
+        // FAAAHH SOUND
+        // ================================
+
+        function playFahh(number) {
+
+            const sound = new Audio("Fahh Sound Effect.mp3");
+
+            sound.play();
+
+            notReadyAgain(number);
+        }
+
+
+        // ================================
+        // YOU WEREN'T READY 2 SECONDS AGO
+        // ================================
+
+        function notReadyAgain(number) {
+
+            result.innerHTML = `
+                <h2>Wait.</h2>
+
+                <p>
+                    You said you weren't ready 2 seconds ago.
+                    We need to discuss this.
+                </p>
+
+                <button onclick="question2(${number})">
+                    FINE, LET'S CONTINUE
+                </button>
+            `;
+        }
+
+
+        // ================================
+        // MENTALLY PREPARED QUESTION
+        // ================================
+
+        function question2(number) {
+
+            result.innerHTML = `
+                <h2>Have you mentally prepared yourself?</h2>
+
+                <button onclick="question6(${number})">
+                    YES
+                </button>
+            `;
+        }
+
+
+        // ================================
+        // FINAL QUESTION
+        // ================================
+
+        function question6(number) {
+
+            result.innerHTML = `
+                <h2>Last question.</h2>
+
+                <p>
+                    Why do you want to know the next number?
+                </p>
+
+                <button onclick="finalQuestion(${number})">
+                    BECAUSE I NEED TO KNOW
+                </button>
+
+                <button onclick="finalQuestion(${number})">
+                    I'M JUST CURIOUS
+                </button>
+
+                <button onclick="finalQuestion(${number})">
+                    I HAVE MY REASONS
+                </button>
+            `;
+        }
+
+
+        // ================================
+        // FINAL RESPONSE
+        // ================================
+
+        function finalQuestion(number) {
+
+            result.innerHTML = `
+                <h2>Hmm.</h2>
+
+                <p>
+                    Interesting choice.
+                </p>
+
+                <button onclick="showAnswer(${number})">
+                    PLEASE GIVE ME THE NUMBER
+                </button>
+            `;
+        }
+
+
+        // ================================
+        // COUNTDOWN + ANSWER
+        // ================================
+
+        function showAnswer(number) {
+
+            let count = 3;
+
+            result.innerHTML = `
+                <h2>Preparing your answer...</h2>
+
+                <h1 id="countdown">
+                    3
+                </h1>
             `;
 
-            setTimeout(() => {
+            const countdown = setInterval(() => {
 
-                result.innerHTML = `
-                    <h2>THE NEXT NUMBER IS...</h2>
-                    <h1>${number + 1}</h1>
-                    <p>
-                        Congratulations. This was completely necessary.
-                    </p>
-                `;
+                count--;
+
+                if (count > 0) {
+
+                    document.getElementById("countdown").innerText = count;
+
+                } else {
+
+                    clearInterval(countdown);
+
+                    result.innerHTML = `
+                        <h2>THE NEXT NUMBER IS...</h2>
+                    `;
+
+                    setTimeout(() => {
+
+                        result.innerHTML = `
+                            <h2>THE NEXT NUMBER IS...</h2>
+
+                            <div class="number-result">
+                                ${number + 1}
+                            </div>
+
+                            <p>
+                                Congratulations.
+                                This was completely necessary.
+                            </p>
+                        `;
+
+                    }, 1000);
+                }
 
             }, 1000);
         }
 
-    }, 1000);
-}
     </script>
 
 </body>

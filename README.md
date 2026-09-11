@@ -93,9 +93,9 @@ For Hardware:
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Helna Sajal C : README, Web Designing
+- Dazzlin Figaruz: Frontend
+
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
