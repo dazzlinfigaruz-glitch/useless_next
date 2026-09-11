@@ -86,7 +86,7 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Watch our project demo](demo.mp4)
+[[Watch our project demo](demo.mp4)](https://drive.google.com/file/d/1nxvtRh2H-0XuBzlciNag-ZjPLZwa8fVY/view?usp=sharing)
 *This video demonstrate the complete Next Number experience.*
 
 # Additional Demos
